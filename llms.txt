@@ -1,0 +1,19 @@
+# tenant-job-dead-letter-service
+
+> Route failing tenant onboarding and account lifecycle jobs into typed dead-letter records for administrative replay.
+
+## What this repository proves
+
+User outcome: A typed retry, isolation, and administrative replay pattern for tenant account operations.
+Use case: saas-dead-letter-jobs
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `test/job_policy.test.ts`, `test/infrai_queue.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

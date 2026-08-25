@@ -1,0 +1,21 @@
+{
+  "name": "tenant-job-dead-letter-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/tenant_job_service.ts",
+    "demo": "tsx src/onboarding_worker.ts",
+    "test": "node scripts/run-tests.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
